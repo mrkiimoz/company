@@ -1,14 +1,3 @@
-<?php
-if(isset($_POST['b_submit'])){
-$name = $_POST['name'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
-$con = new PDO('mysql:host=localhost;dbname=test','root','') or die (PDO_error($con));
-$con->exec("INSERT  INTO users(name,email,subject,message) values('$name','$email','$subject','$message')");
-echo "Your Data Has Been Saved";
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
